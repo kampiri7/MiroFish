@@ -36,10 +36,8 @@
 > **Personal notes / findings so far:**
 > - With 1000+ agents, simulation runs can get slow — I bumped the default agent count in my config to 200 for quicker iteration during development
 > - Financial news seeds seem to produce more polarized sentiment distributions than narrative/story seeds; worth investigating further
+> - Noticed that running multiple simulations back-to-back with the same seed doesn't always yield identical results — seems like there may be non-deterministic behavior in agent initialization; need to look into whether a random seed option exists
 
 ## ⚡ Overview
 
-**MiroFish** is a next-generation AI prediction engine powered by multi-agent technology. By extracting seed information from the real world (such as breaking news, policy drafts, or financial signals), it automatically constructs a high-fidelity parallel digital world. Within this space, thousands of intelligent agents with independent personalities, long-term memory, and behavioral logic freely interact and undergo social evolution. You can inject variables dynamically from a "God's-eye view" to precisely deduce future trajectories — **rehearse the future in a digital sandbox, and win decisions after countless simulations**.
-
-> You only need to: Upload seed materials (data analysis reports or interesting novel stories) and describe your prediction requirements in natural language</br>
-> MiroFish will return: A d
+**MiroFish** is a next-generation AI prediction engine powered by multi-agent technology. By extracting seed information from the real world (such as breaking news, policy drafts, or financial signals), it automatically constructs a high-fidelity parallel digital world. Within this space, thousands of intelligent agents with independent personalities, long-term memory, and behavioral logic freely interact and undergo social evolution. You can inject variables dynamically from a "God
