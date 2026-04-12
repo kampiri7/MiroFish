@@ -1,3 +1,5 @@
+# MiroFish
+
 <div align="center">
 
 <img src="./static/image/MiroFish_logo_compressed.jpeg" alt="MiroFish Logo" width="75%"/>
@@ -30,14 +32,14 @@
 > - Testing agent behavior with stock market news as seed data
 > - Experimenting with larger agent populations (1000+) to observe emergent trends
 > - Tracking how sentiment signals propagate through the simulated agent network
+>
+> **Personal notes / findings so far:**
+> - With 1000+ agents, simulation runs can get slow — I bumped the default agent count in my config to 200 for quicker iteration during development
+> - Financial news seeds seem to produce more polarized sentiment distributions than narrative/story seeds; worth investigating further
 
 ## ⚡ Overview
 
 **MiroFish** is a next-generation AI prediction engine powered by multi-agent technology. By extracting seed information from the real world (such as breaking news, policy drafts, or financial signals), it automatically constructs a high-fidelity parallel digital world. Within this space, thousands of intelligent agents with independent personalities, long-term memory, and behavioral logic freely interact and undergo social evolution. You can inject variables dynamically from a "God's-eye view" to precisely deduce future trajectories — **rehearse the future in a digital sandbox, and win decisions after countless simulations**.
 
 > You only need to: Upload seed materials (data analysis reports or interesting novel stories) and describe your prediction requirements in natural language</br>
-> MiroFish will return: A detailed prediction report and a deeply interactive high-fidelity digital world
-
-### Our Vision
-
-MiroFish is dedicated to creating a swarm intelligence mirror that maps reality. By capturing the collective emergence triggered by individual interactions
+> MiroFish will return: A d
