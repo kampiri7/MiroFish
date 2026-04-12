@@ -19,6 +19,7 @@ COPY frontend/package.json frontend/package-lock.json ./frontend/
 COPY backend/pyproject.toml backend/uv.lock ./backend/
 
 # 安装依赖（Node + Python）
+# --frozen ensures reproducible installs; omit --prefix workaround if frontend has its own lockfile
 RUN npm ci \
   && npm ci --prefix frontend \
   && cd backend && uv sync --frozen
@@ -26,6 +27,7 @@ RUN npm ci \
 # 复制项目源码
 COPY . .
 
+# Expose backend (5001) and frontend dev server (3000)
 EXPOSE 3000 5001
 
 # 同时启动前后端（开发模式）
