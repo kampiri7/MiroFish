@@ -25,6 +25,11 @@
 </div>
 
 > **Personal fork note:** I'm using this project to explore multi-agent simulation for financial market prediction. The upstream repo is at [666ghj/MiroFish](https://github.com/666ghj/MiroFish).
+>
+> **My focus areas:**
+> - Testing agent behavior with stock market news as seed data
+> - Experimenting with larger agent populations (1000+) to observe emergent trends
+> - Tracking how sentiment signals propagate through the simulated agent network
 
 ## ⚡ Overview
 
@@ -35,6 +40,4 @@
 
 ### Our Vision
 
-MiroFish is dedicated to creating a swarm intelligence mirror that maps reality. By capturing the collective emergence triggered by individual interactions, we break through the limitations of traditional prediction:
-
-- **At the Macro Level**: We are a rehearsal laboratory for decision-makers, allowing policies and public relations to be tested at z
+MiroFish is dedicated to creating a swarm intelligence mirror that maps reality. By capturing the collective emergence triggered by individual interactions
