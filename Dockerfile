@@ -30,5 +30,8 @@ COPY . .
 # Expose backend (5001) and frontend dev server (3000)
 EXPOSE 3000 5001
 
+# Set a default timezone so logs show local time instead of UTC
+ENV TZ=Asia/Shanghai
+
 # 同时启动前后端（开发模式）
 CMD ["npm", "run", "dev"]
