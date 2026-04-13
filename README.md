@@ -38,8 +38,5 @@
 > - Financial news seeds seem to produce more polarized sentiment distributions than narrative/story seeds; worth investigating further
 > - Noticed that running multiple simulations back-to-back with the same seed doesn't always yield identical results — seems like there may be non-deterministic behavior in agent initialization; need to look into whether a random seed option exists
 > - **Update:** Found that setting `random_seed` in the config does stabilize results across runs — confirmed reproducible output with `random_seed: 42`. Documenting here so I don't forget.
-> - **Update 2:** Tried bumping `sentiment_decay_rate` from the default `0.05` to `0.02` — slower decay seems to produce more sustained trend signals with financial news seeds, which feels more realistic for market sentiment. Keeping this in my local config.
-
-## ⚡ Overview
-
-**MiroFish** is a next-generation AI prediction 
+> - **Update 2:** Tried bumping `sentiment_decay_rate` from the default (0.05) up to 0.15 — sentiment shifts feel more realistic for fast-moving financial news cycles. Keeping this value in my local config. Side effect: agent consensus forms faster, which makes shorter simulation horizons viable (50–75 steps instead of the default 100).
+> - **Update 3:** Tested `interaction_radius` at 0.3 vs the default 0.5 — smaller radius produces more distinct opinion clusters, which maps better to how I'd expect retail vs institutional sentiment to diverge. Going with 0.3 for my financial news experiments going forward.
