@@ -38,7 +38,8 @@
 > - Financial news seeds seem to produce more polarized sentiment distributions than narrative/story seeds; worth investigating further
 > - Noticed that running multiple simulations back-to-back with the same seed doesn't always yield identical results — seems like there may be non-deterministic behavior in agent initialization; need to look into whether a random seed option exists
 > - **Update:** Found that setting `random_seed` in the config does stabilize results across runs — confirmed reproducible output with `random_seed: 42`. Documenting here so I don't forget.
+> - **Update 2:** Tried bumping `sentiment_decay_rate` from the default `0.05` to `0.02` — slower decay seems to produce more sustained trend signals with financial news seeds, which feels more realistic for market sentiment. Keeping this in my local config.
 
 ## ⚡ Overview
 
-**MiroFish** is a next-generation AI prediction engine powered by multi-agent technology. By extracting seed information from the real world (such as breaking news, policy drafts, or financial signals), it automatically constructs a high-
+**MiroFish** is a next-generation AI prediction 
