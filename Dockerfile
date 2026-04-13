@@ -33,5 +33,8 @@ EXPOSE 3000 5001
 # Set a default timezone so logs show local time instead of UTC
 ENV TZ=Asia/Shanghai
 
+# Set Python to unbuffered mode so logs appear immediately in docker logs output
+ENV PYTHONUNBUFFERED=1
+
 # 同时启动前后端（开发模式）
 CMD ["npm", "run", "dev"]
