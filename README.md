@@ -37,7 +37,8 @@
 > - With 1000+ agents, simulation runs can get slow — I bumped the default agent count in my config to 200 for quicker iteration during development
 > - Financial news seeds seem to produce more polarized sentiment distributions than narrative/story seeds; worth investigating further
 > - Noticed that running multiple simulations back-to-back with the same seed doesn't always yield identical results — seems like there may be non-deterministic behavior in agent initialization; need to look into whether a random seed option exists
+> - **Update:** Found that setting `random_seed` in the config does stabilize results across runs — confirmed reproducible output with `random_seed: 42`. Documenting here so I don't forget.
 
 ## ⚡ Overview
 
-**MiroFish** is a next-generation AI prediction engine powered by multi-agent technology. By extracting seed information from the real world (such as breaking news, policy drafts, or financial signals), it automatically constructs a high-fidelity parallel digital world. Within this space, thousands of intelligent agents with independent personalities, long-term memory, and behavioral logic freely interact and undergo social evolution. You can inject variables dynamically from a "God
+**MiroFish** is a next-generation AI prediction engine powered by multi-agent technology. By extracting seed information from the real world (such as breaking news, policy drafts, or financial signals), it automatically constructs a high-
