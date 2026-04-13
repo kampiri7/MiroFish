@@ -45,5 +45,9 @@ ENV PYTHONDONTWRITEBYTECODE=1
 # check this variable behave consistently in my local dev environment
 ENV NODE_ENV=development
 
+# Personal note: set UV_NO_CACHE=1 to avoid uv caching packages inside the
+# container, keeping the image size smaller for local dev use
+ENV UV_NO_CACHE=1
+
 # 同时启动前后端（开发模式）
 CMD ["npm", "run", "dev"]
