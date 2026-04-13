@@ -41,5 +41,9 @@ ENV PYTHONUNBUFFERED=1
 # with .pyc files since this is just for local dev/learning
 ENV PYTHONDONTWRITEBYTECODE=1
 
+# Personal note: set NODE_ENV to development explicitly so any libraries that
+# check this variable behave consistently in my local dev environment
+ENV NODE_ENV=development
+
 # 同时启动前后端（开发模式）
 CMD ["npm", "run", "dev"]
