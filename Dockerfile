@@ -31,8 +31,8 @@ COPY . .
 EXPOSE 3000 5001
 
 # Set a default timezone so logs show local time instead of UTC
-# Personal note: changed to UTC for easier log comparison with cloud services
-ENV TZ=UTC
+# Personal note: changed to Asia/Shanghai for my local timezone
+ENV TZ=Asia/Shanghai
 
 # Set Python to unbuffered mode so logs appear immediately in docker logs output
 ENV PYTHONUNBUFFERED=1
