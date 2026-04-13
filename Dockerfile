@@ -37,5 +37,9 @@ ENV TZ=Asia/Shanghai
 # Set Python to unbuffered mode so logs appear immediately in docker logs output
 ENV PYTHONUNBUFFERED=1
 
+# Personal note: added PYTHONDONTWRITEBYTECODE to avoid cluttering the container
+# with .pyc files since this is just for local dev/learning
+ENV PYTHONDONTWRITEBYTECODE=1
+
 # 同时启动前后端（开发模式）
 CMD ["npm", "run", "dev"]
