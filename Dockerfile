@@ -49,5 +49,9 @@ ENV NODE_ENV=development
 # container, keeping the image size smaller for local dev use
 ENV UV_NO_CACHE=1
 
+# Personal note: set UV_COMPILE_BYTECODE=0 to skip compiling .pyc files during
+# uv sync, consistent with PYTHONDONTWRITEBYTECODE above
+ENV UV_COMPILE_BYTECODE=0
+
 # 同时启动前后端（开发模式）
 CMD ["npm", "run", "dev"]
