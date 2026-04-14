@@ -38,3 +38,7 @@ ipython>=8.0.0
 # Testing (personal addition - running pytest locally)
 pytest>=7.4.0
 pytest-asyncio>=0.21.0
+coverage>=7.3.0  # added for checking test coverage locally
+
+# Linting/formatting (personal addition - keeping code clean)
+ruff>=0.1.0
