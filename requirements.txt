@@ -34,3 +34,7 @@ flask-cors>=4.0.0
 
 # Development/debugging tools (personal addition)
 ipython>=8.0.0
+
+# Testing (personal addition - running pytest locally)
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
