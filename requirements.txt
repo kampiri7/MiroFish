@@ -31,3 +31,6 @@ flask-limiter>=3.5.0
 
 # CORS support
 flask-cors>=4.0.0
+
+# Development/debugging tools (personal addition)
+ipython>=8.0.0
