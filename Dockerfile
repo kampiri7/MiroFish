@@ -53,5 +53,9 @@ ENV UV_NO_CACHE=1
 # uv sync, consistent with PYTHONDONTWRITEBYTECODE above
 ENV UV_COMPILE_BYTECODE=0
 
+# Personal note: set FORCE_COLOR=1 so that tools like pytest and npm scripts
+# output colored text even inside the container, making logs easier to read
+ENV FORCE_COLOR=1
+
 # 同时启动前后端（开发模式）
 CMD ["npm", "run", "dev"]
