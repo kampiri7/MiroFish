@@ -62,5 +62,10 @@ ENV FORCE_COLOR=1
 # stderr automatically — very helpful for debugging in local dev
 ENV PYTHONFAULTHANDLER=1
 
+# Personal note: set PYTHONASYNCIODEBUG=1 to enable asyncio debug mode, which
+# logs warnings for slow callbacks and unawaited coroutines — useful for
+# catching async bugs early during local development
+ENV PYTHONASYNCIODEBUG=1
+
 # 同时启动前后端（开发模式）
 CMD ["npm", "run", "dev"]
