@@ -57,5 +57,10 @@ ENV UV_COMPILE_BYTECODE=0
 # output colored text even inside the container, making logs easier to read
 ENV FORCE_COLOR=1
 
+# Personal note: set PYTHONFAULTHANDLER=1 so that if the backend crashes with a
+# segfault or similar low-level error, Python will print a full traceback to
+# stderr automatically — very helpful for debugging in local dev
+ENV PYTHONFAULTHANDLER=1
+
 # 同时启动前后端（开发模式）
 CMD ["npm", "run", "dev"]
