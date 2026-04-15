@@ -59,8 +59,8 @@ async def main() -> None:
 
     bot_token = os.getenv("BOT_TOKEN")
     channel_id = int(os.getenv("CHANNEL_ID", "0"))
-    # Defaulting debug to true locally so I don't have to set it in .env every time
-    debug_mode = os.getenv("DEBUG", "true").lower() == "true"
+    # Changed default to false -- debug mode was spamming my logs during normal use
+    debug_mode = os.getenv("DEBUG", "false").lower() == "true"
 
     if debug_mode:
         logger.setLevel(logging.DEBUG)
