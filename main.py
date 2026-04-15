@@ -86,8 +86,9 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
-    # Ensure data directory exists
+    # Ensure required directories exist
     Path("data").mkdir(exist_ok=True)
+    Path("logs").mkdir(exist_ok=True)
 
     try:
         asyncio.run(main())
