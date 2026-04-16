@@ -92,6 +92,10 @@ if __name__ == "__main__":
     Path("logs").mkdir(exist_ok=True)
     # Also create a screenshots dir -- useful for debugging vision/detection issues
     Path("screenshots").mkdir(exist_ok=True)
+    # Keep old runs from cluttering the screenshots dir; only keep the 50 most recent files
+    screenshot_files = sorted(Path("screenshots").glob("*.png"), key=os.path.getmtime)
+    for old_file in screenshot_files[:-50]:
+        old_file.unlink()
 
     try:
         asyncio.run(main())
