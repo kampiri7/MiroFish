@@ -71,5 +71,10 @@ ENV PYTHONASYNCIODEBUG=1
 # DeprecationWarning) during local dev so I can catch issues early
 ENV PYTHONWARNINGS=all
 
+# Personal note: set PYTHONBREAKPOINT to the pudb debugger if available,
+# falling back to the default pdb — makes dropping into a debugger nicer
+# during local dev. Install pudb separately if needed: uv pip install pudb
+ENV PYTHONBREAKPOINT=pudb.set_trace
+
 # 同时启动前后端（开发模式）
 CMD ["npm", "run", "dev"]
