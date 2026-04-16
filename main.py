@@ -90,6 +90,8 @@ if __name__ == "__main__":
     # Ensure required directories exist
     Path("data").mkdir(exist_ok=True)
     Path("logs").mkdir(exist_ok=True)
+    # Also create a screenshots dir -- useful for debugging vision/detection issues
+    Path("screenshots").mkdir(exist_ok=True)
 
     try:
         asyncio.run(main())
