@@ -67,5 +67,9 @@ ENV PYTHONFAULTHANDLER=1
 # catching async bugs early during local development
 ENV PYTHONASYNCIODEBUG=1
 
+# Personal note: set PYTHONWARNINGS to show all warnings (including
+# DeprecationWarning) during local dev so I can catch issues early
+ENV PYTHONWARNINGS=all
+
 # 同时启动前后端（开发模式）
 CMD ["npm", "run", "dev"]
